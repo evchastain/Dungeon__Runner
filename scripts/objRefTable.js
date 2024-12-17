@@ -1,0 +1,73 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.Platform,
+		C3.Plugins.TiledBg,
+		C3.Behaviors.solid,
+		C3.Plugins.Mouse,
+		C3.Behaviors.Bullet,
+		C3.Plugins.Text,
+		C3.Plugins.Keyboard,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.TiledBg.Acts.SetImageOffsetX,
+		C3.Plugins.TiledBg.Exps.ImageOffsetX,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Behaviors.Platform.Acts.SimulateControl,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Behaviors.Bullet.Acts.SetAngleOfMotion,
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Behaviors.Platform.Cnds.IsJumping,
+		C3.Plugins.Sprite.Acts.StopAnim,
+		C3.Plugins.Sprite.Acts.StartAnim
+	];
+};
+self.C3_JsPropNameTable = [
+	{Platform: 0},
+	{knightplayer: 0},
+	{Solid: 0},
+	{ground: 0},
+	{wall: 0},
+	{Mouse: 0},
+	{Bullet: 0},
+	{spike: 0},
+	{spawner: 0},
+	{destroyer: 0},
+	{game: 0},
+	{invisascorre: 0},
+	{Text: 0},
+	{spawn2: 0},
+	{Keyboard: 0},
+	{Text2: 0},
+	{b: 0},
+	{shad: 0},
+	{score: 0}
+];
+
+self.InstanceType = {
+	knightplayer: class extends self.ISpriteInstance {},
+	ground: class extends self.ITiledBackgroundInstance {},
+	wall: class extends self.ITiledBackgroundInstance {},
+	Mouse: class extends self.IInstance {},
+	spike: class extends self.ISpriteInstance {},
+	spawner: class extends self.ISpriteInstance {},
+	destroyer: class extends self.ISpriteInstance {},
+	game: class extends self.ITextInstance {},
+	invisascorre: class extends self.ISpriteInstance {},
+	Text: class extends self.ITextInstance {},
+	spawn2: class extends self.ISpriteInstance {},
+	Keyboard: class extends self.IInstance {},
+	Text2: class extends self.ITextInstance {},
+	b: class extends self.ISpriteInstance {},
+	shad: class extends self.ISpriteInstance {}
+}
